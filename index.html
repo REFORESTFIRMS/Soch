@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SochBadhao - Escape the Struggle, Build Your Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #d31027, #ea384d);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .pain-section {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 900px;
+            line-height: 1.8;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .cta a {
+            padding: 18px 50px;
+            font-size: 26px;
+            background: #ffcc00;
+            color: #222;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s;
+            display: inline-block;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .cta a:hover {
+            background: #ff9900;
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .language-select {
+            margin: 20px;
+        }
+        select {
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        SochBadhao - Escape the Struggle, Build Your Future
+    </header>
+
+    <div class="container">
+        <div class="language-select">
+            <label for="language">🌎 Choose Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="bn">বাংলা</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="mr">मराठी</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="ml">മലയാളം</option>
+                <option value="pa">ਪੰਜਾਬੀ</option>
+                <option value="or">ଓଡ଼ିଆ</option>
+                <option value="bh">भोजपुरी</option>
+            </select>
+        </div>
+
+        <div class="pain-section" id="pain-text">
+            🔥 **STOP SUFFERING!** 🔥<br>
+            💥 **Your boss doesn’t care about you!**<br>
+            💰 **Tired of peanuts for a paycheck?**<br>
+            😡 **Drowning in deadlines while others take the credit?**<br>
+            🚨 **Feeling trapped in a soul-sucking career?**<br>
+            **ENOUGH IS ENOUGH!** It’s time to break free, build your success, and take control. **Start NOW!**
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("language").addEventListener("change", function() {
+                var lang = this.value;
+                var translations = {
+                    "en": "🔥 STOP SUFFERING! 🔥 Your boss doesn’t care about you! Tired of peanuts for a paycheck? Drowning in deadlines while others take the credit? Feeling trapped in a soul-sucking career? ENOUGH IS ENOUGH! It’s time to break free, build your success, and take control. Start NOW!",
+                    "hi": "🔥 अब बहुत हुआ! 🔥 क्या आपका बॉस आपकी परवाह करता है? नहीं! क्या आप कम सैलरी और ज्यादा प्रेशर से परेशान हैं? अब समय आ गया है कि आप अपनी ज़िन्दगी खुद कंट्रोल करें!",
+                    "bn": "🔥 আর না! 🔥 আপনার বস কি আপনার মূল্য দেয়? না! কম বেতন, বেশি কাজের চাপ? এবার নিজেকে বদলানোর সময়!",
+                    "ta": "🔥 இப்போது போதும்! 🔥 உங்கள் முதலாளி உங்களை மதிக்கிறாரா? இல்லை! குறைந்த சம்பளம், அதிக வேலை? இப்போது மாற்றம் தேவை!",
+                    "te": "🔥 ఇక చాలూ! 🔥 మీ బాస్ మీను పట్టించుకుంటాడా? కాదు! తక్కువ జీతం, అధిక పని ఒత్తిడి? ఇప్పుడు మారాలిసిన సమయం!",
+                    "mr": "🔥 आता पुरे झाले! 🔥 तुमचा बॉस तुमच्याकडे लक्ष देतो का? नाही! कमी पगार, जास्त ताण? आता स्वतःसाठी बदल घडवा!",
+                    "gu": "🔥 હવે પૂરું! 🔥 તમારો બોસ તમારું ધ્યાન રાખે છે? નહિ! ઓછી પગાર, વધારે કામ? હવે બદલાવ લાવો!",
+                    "ml": "🔥 ഇനി മതി! 🔥 നിങ്ങളുടെ മേലധികാരി നിങ്ങളെ പരിഗണിക്കുമോ? ഇല്ല! കുറവ് ശമ്പളം, കൂടുതൽ ജോലി? ഇനി മാറ്റം വേണം!",
+                    "pa": "🔥 ਹੁਣ ਬੱਸ! 🔥 ਕੀ ਤੁਹਾਡਾ ਬੌਸ ਤੁਹਾਡੀ ਪਰਵਾਹ ਕਰਦਾ ਹੈ? ਨਹੀਂ! ਘੱਟ ਤਨਖਾਹ, ਵਧੂ ਕੰਮ? ਹੁਣੇ ਬਦਲੋ!",
+                    "or": "🔥 ବସ୍! 🔥 ଆପଣଙ୍କ ବସ୍ ଆପଣଙ୍କୁ ମୂଲ୍ୟ ଦେଉଛନ୍ତି କି? ନାହିଁ! କମ ଦରମା, ଅଧିକ କାମ? ଏବେ ପରିବର୍ତ୍ତନ ଆଣନ୍ତୁ!",
+                    "bh": "🔥 अब बहुत हो गइल! 🔥 का तोहार मालिक तोहार परवाह करेला? ना! कम तनख्वाह, ज्यादा काम? अब बदलबे के बारी बा!"
+                };
+                document.getElementById("pain-text").innerHTML = translations[lang];
+            });
+        });
+    </script>
+
+    <div class="cta">
+        <h2>🚀 Take Action Now!</h2>
+        <a href="https://forms.gle/6z75Vro1kbe9Dsj5A" target="_blank">Get Started Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SochBadhao. All Rights Reserved.</p>
+        <p>📍 Kolkata, 700161 | 📧 Email: askguruji@sochbadhao.com | 📞 Call: 9874076688</p>
+    </footer>
+</body>
+</html>
